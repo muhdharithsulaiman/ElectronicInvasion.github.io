@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Electronic Invasion | Tech & Project Development</title>
+    <title>Electronic Invasion | Project Development & Engineering</title>
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -259,15 +259,42 @@
             transform: translateY(-5px);
         }
 
+        .engineer-title {
+            color: var(--cyan-glow);
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
         .about-box p {
             color: var(--text-main);
             font-size: 1.05rem;
-            margin-bottom: 20px;
+            margin-bottom: 18px;
+        }
+
+        .skills-tag-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .skill-tag {
+            background: rgba(0, 229, 255, 0.1);
+            border: 1px solid var(--cyan-glow);
+            color: var(--cyan-glow);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 1px;
         }
 
         .highlights {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 20px;
             margin-top: 30px;
         }
@@ -275,12 +302,20 @@
         .highlight-item {
             background: rgba(0, 229, 255, 0.05);
             border-left: 3px solid var(--cyan-glow);
-            padding: 15px;
+            padding: 18px;
+            border-radius: 0 6px 6px 0;
         }
 
         .highlight-item h4 {
             color: var(--cyan-glow);
-            margin-bottom: 5px;
+            margin-bottom: 8px;
+            font-size: 1.05rem;
+        }
+
+        .highlight-item p {
+            font-size: 0.9rem;
+            color: var(--text-dim);
+            margin-bottom: 0;
         }
 
         /* Project Cards Grid */
@@ -388,22 +423,50 @@
     <section id="about">
         <h2 class="section-title">About Me</h2>
         <div class="about-box">
-            <p>Welcome to <strong>Electronic Invasion</strong>. As a passionate and result-driven Project Developer, I specialize in bridging high-level hardware design with intelligent embedded software to build high-performance, real-world tech solutions.</p>
-            <p>My expertise covers full-cycle hardware engineering—ranging from advanced logic design on FPGA boards to wireless IoT automation and tailored Final Year Projects (FYP) prototyping. I pride myself on solving complex technical challenges with clean architecture, robust hardware design, and futuristic innovation.</p>
+            <div class="engineer-title">MUHAMMAD HARITH BIN SULAIMAN</div>
+            <p>Welcome to <strong>Electronic Invasion</strong>. I am a qualified Electronic Engineer holding a <strong>Diploma in Technology Electronic from KV Kuala Klawang</strong> and a <strong>Bachelor's Degree in Technology & Engineering Electronic System from UniMAP</strong>.</p>
             
+            <p>With extensive hands-on experience in electronic engineering and system design, I specialize in transforming ambitious concepts into fully functional, high-performance physical prototypes. My mission is to empower students and researchers by providing top-tier Final Year Project (FYP) consultancy and technical execution at student-friendly, affordable rates.</p>
+
+            <p>Beyond building the physical hardware, I offer comprehensive end-to-end guidance through every single stage of project development:</p>
+
             <div class="highlights">
                 <div class="highlight-item">
-                    <h4>Precision Engineering</h4>
-                    <p>Meticulous hardware-software integration for zero-fail performance.</p>
+                    <h4>1. Ideation & Concept</h4>
+                    <p>Feasibility assessment and logic flow design tailored to project goals.</p>
                 </div>
                 <div class="highlight-item">
-                    <h4>End-to-End Prototyping</h4>
-                    <p>From initial concept schematics to complete deployable prototypes.</p>
+                    <h4>2. Schematic Design</h4>
+                    <p>Precise circuit design ensuring optimal voltage regulation and signal integrity.</p>
                 </div>
                 <div class="highlight-item">
-                    <h4>Custom Architecture</h4>
-                    <p>Tailored logic and firmware engineered precisely to client specs.</p>
+                    <h4>3. PCB Layout</h4>
+                    <p>Custom PCB design ready for fabrication and clean component mounting.</p>
                 </div>
+                <div class="highlight-item">
+                    <h4>4. Bill of Materials (BOM)</h4>
+                    <p>Curated component selection maximizing performance while minimizing cost.</p>
+                </div>
+                <div class="highlight-item">
+                    <h4>5. Custom Firmware & Code</h4>
+                    <p>Clean, documented programming tailored specifically to your target hardware.</p>
+                </div>
+            </div>
+
+            <p style="margin-top: 25px; font-weight: bold; color: var(--cyan-glow);">Core Hardware Platforms & Microcontrollers:</p>
+            <div class="skills-tag-container">
+                <span class="skill-tag">Arduino</span>
+                <span class="skill-tag">ESP32</span>
+                <span class="skill-tag">Raspberry Pi</span>
+                <span class="skill-tag">FPGA Logic Boards</span>
+            </div>
+
+            <p style="font-weight: bold; color: var(--cyan-glow);">Programming Languages & Firmware Skills:</p>
+            <div class="skills-tag-container">
+                <span class="skill-tag">C</span>
+                <span class="skill-tag">C++</span>
+                <span class="skill-tag">Java</span>
+                <span class="skill-tag">Python</span>
             </div>
         </div>
     </section>
@@ -462,7 +525,7 @@
     <!-- Contact Section -->
     <section id="contact" style="text-align: center;">
         <h2 class="section-title">Start Your Project</h2>
-        <p style="color: var(--text-dim); margin-bottom: 30px;">Have an FYP, FPGA, or IoT project idea? Connect directly via WhatsApp or Telegram to discuss specifications.</p>
+        <p style="color: var(--text-dim); margin-bottom: 30px;">Have an FYP, FPGA, or IoT project idea? Connect directly with Muhammad Harith via WhatsApp or Telegram to discuss specifications.</p>
         
         <div class="contact-buttons">
             <a href="https://wa.me/60193347191" target="_blank" class="btn-action btn-whatsapp">
@@ -478,7 +541,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2026 ELECTRONIC INVASION. All rights reserved.</p>
+        <p>&copy; 2026 ELECTRONIC INVASION | Muhammad Harith Bin Sulaiman. All rights reserved.</p>
     </footer>
 
 </body>
