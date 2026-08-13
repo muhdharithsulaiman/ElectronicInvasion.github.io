@@ -179,6 +179,7 @@
             font-size: 0.9rem;
             transition: all 0.3s ease;
             border: 1px solid transparent;
+            cursor: pointer;
         }
 
         .btn-whatsapp {
@@ -207,6 +208,22 @@
             color: #fff;
             box-shadow: 0 0 25px rgba(0, 136, 204, 0.6);
             transform: translateY(-3px);
+        }
+
+        .btn-more {
+            background: rgba(0, 229, 255, 0.1);
+            color: var(--cyan-glow);
+            border-color: var(--cyan-glow);
+            box-shadow: 0 0 10px rgba(0, 229, 255, 0.2);
+            width: 100%;
+            justify-content: center;
+            margin-top: 15px;
+        }
+
+        .btn-more:hover {
+            background: var(--cyan-glow);
+            color: #000;
+            box-shadow: 0 0 20px var(--cyan-glow);
         }
 
         .phone-display {
@@ -321,25 +338,37 @@
         /* Project Cards Grid */
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 30px;
         }
 
         .card {
             background: var(--card-bg);
             border: 1px solid var(--border-line);
-            padding: 30px;
+            padding: 25px;
             border-radius: 6px;
             position: relative;
             overflow: hidden;
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             backdrop-filter: blur(8px);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .card:hover {
             transform: translateY(-10px);
             border-color: var(--cyan-glow);
             box-shadow: 0 10px 30px rgba(0, 229, 255, 0.2);
+        }
+
+        .card-img-preview {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            border: 1px solid var(--border-line);
         }
 
         .card-tag {
@@ -353,14 +382,81 @@
 
         .card h3 {
             color: #fff;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             font-size: 1.3rem;
         }
 
         .card p {
             color: var(--text-dim);
             font-size: 0.95rem;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
+        }
+
+        /* Modal Showcase Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(5, 8, 17, 0.95);
+            backdrop-filter: blur(15px);
+            z-index: 2000;
+            overflow-y: auto;
+            padding: 40px 5%;
+        }
+
+        .modal-content {
+            background: var(--card-bg);
+            border: 1px solid var(--cyan-glow);
+            box-shadow: 0 0 30px rgba(0, 229, 255, 0.3);
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 30px;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px; right: 25px;
+            color: var(--cyan-glow);
+            font-size: 2rem;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .close-modal:hover {
+            transform: scale(1.2);
+        }
+
+        .modal-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
+        }
+
+        .gallery-item {
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid var(--border-line);
+            border-radius: 6px;
+            padding: 12px;
+            text-align: center;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 220px;
+            object-fit: contain;
+            background: #0d1626;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        .gallery-item h4 {
+            color: var(--cyan-glow);
+            font-size: 0.95rem;
+            letter-spacing: 1px;
         }
 
         footer {
@@ -476,14 +572,18 @@
         <h2 class="section-title">FYP Projects</h2>
         <div class="grid">
             <div class="card">
-                <div class="card-tag">Final Year Project</div>
-                <h3>Autonomous Telemetry & Tracking</h3>
-                <p>Advanced sensor integration and wireless data transfer system created for engineering research and academic prototypes.</p>
+                <div>
+                    <div class="card-tag">Final Year Project</div>
+                    <h3>Autonomous Telemetry & Tracking</h3>
+                    <p>Advanced sensor integration and wireless data transfer system created for engineering research and academic prototypes.</p>
+                </div>
             </div>
             <div class="card">
-                <div class="card-tag">Final Year Project</div>
-                <h3>Smart Energy Monitoring System</h3>
-                <p>High-accuracy power monitoring unit integrated with custom algorithmic analysis and real-time displays.</p>
+                <div>
+                    <div class="card-tag">Final Year Project</div>
+                    <h3>Smart Energy Monitoring System</h3>
+                    <p>High-accuracy power monitoring unit integrated with custom algorithmic analysis and real-time displays.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -493,14 +593,18 @@
         <h2 class="section-title">FPGA Projects</h2>
         <div class="grid">
             <div class="card">
-                <div class="card-tag">FPGA / Verilog / VHDL</div>
-                <h3>High-Speed Signal Processor</h3>
-                <p>Custom digital logic architecture optimized for low-latency digital signal processing on FPGA hardware.</p>
+                <div>
+                    <div class="card-tag">FPGA / Verilog / VHDL</div>
+                    <h3>High-Speed Signal Processor</h3>
+                    <p>Custom digital logic architecture optimized for low-latency digital signal processing on FPGA hardware.</p>
+                </div>
             </div>
             <div class="card">
-                <div class="card-tag">FPGA / Hardware Logic</div>
-                <h3>VGA Display & Graphics Core</h3>
-                <p>Hardware-level video output controller built completely from scratch using Verilog logic blocks.</p>
+                <div>
+                    <div class="card-tag">FPGA / Hardware Logic</div>
+                    <h3>VGA Display & Graphics Core</h3>
+                    <p>Hardware-level video output controller built completely from scratch using Verilog logic blocks.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -509,18 +613,64 @@
     <section id="iot">
         <h2 class="section-title">IoT Projects</h2>
         <div class="grid">
+            <!-- AI Eye Tracker System Card -->
             <div class="card">
-                <div class="card-tag">IoT & Wireless</div>
-                <h3>Industrial Sensor Gateway</h3>
-                <p>Multi-protocol MQTT/Wi-Fi wireless node for automated remote monitoring and cloud analytics.</p>
+                <div>
+                    <img src="ai-tracker-pcb3d-top.png" alt="AI Eye Tracker System" class="card-img-preview">
+                    <div class="card-tag">IoT & AI Integration</div>
+                    <h3>AI Eye Tracker System</h3>
+                    <p>An intelligent ESP32-powered IoT safety system featuring custom PCB architecture, haptic vibrator alerts, WiFi server control, and dedicated mobile APK interface.</p>
+                </div>
+                <button class="btn-action btn-more" onclick="openModal('eyetracker-modal')">
+                    <i class="fa-solid fa-layer-group"></i> View Documentation
+                </button>
             </div>
+
             <div class="card">
-                <div class="card-tag">IoT & Automation</div>
-                <h3>Smart Home Automation System</h3>
-                <p>Custom micro-controller platform with encrypted web dashboard control for physical hardware actuators.</p>
+                <div>
+                    <div class="card-tag">IoT & Automation</div>
+                    <h3>Smart Home Automation System</h3>
+                    <p>Custom micro-controller platform with encrypted web dashboard control for physical hardware actuators.</p>
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- Modal for AI Eye Tracker System Details -->
+    <div id="eyetracker-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('eyetracker-modal')">&times;</span>
+            <h2 style="color: var(--cyan-glow); text-transform: uppercase; letter-spacing: 2px;">AI Eye Tracker System - Design Assets</h2>
+            <p style="color: var(--text-dim); margin-top: 5px;">Full engineering breakdown including schematic design, 2D/3D PCB layout, firmware, and custom Android launcher.</p>
+
+            <div class="modal-gallery">
+                <div class="gallery-item">
+                    <img src="ai-tracker-schematic.png" alt="Schematic Diagram">
+                    <h4>1. Circuit Schematic</h4>
+                </div>
+                <div class="gallery-item">
+                    <img src="ai-tracker-pcb2d.png" alt="PCB 2D View">
+                    <h4>2. PCB 2D Trace Layout</h4>
+                </div>
+                <div class="gallery-item">
+                    <img src="ai-tracker-pcb3d-top.png" alt="PCB 3D Top View">
+                    <h4>3. PCB 3D Top Render</h4>
+                </div>
+                <div class="gallery-item">
+                    <img src="ai-tracker-pcb3d-bottom.png" alt="PCB 3D Bottom View">
+                    <h4>4. PCB 3D Bottom Render</h4>
+                </div>
+                <div class="gallery-item">
+                    <img src="ai-tracker-code.png" alt="Code Example">
+                    <h4>5. ESP32 Arduino Code</h4>
+                </div>
+                <div class="gallery-item">
+                    <img src="ai-tracker-apk.png" alt="APK Launcher">
+                    <h4>6. Android App Interface</h4>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Contact Section -->
     <section id="contact" style="text-align: center;">
@@ -543,6 +693,29 @@
     <footer>
         <p>&copy; 2026 ELECTRONIC INVASION | Muhammad Harith Bin Sulaiman. All rights reserved.</p>
     </footer>
+
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+            document.body.style.overflow = "hidden";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+
+        // Close modal when clicking outside the box
+        window.onclick = function(event) {
+            let modals = document.getElementsByClassName('modal');
+            for (let i = 0; i < modals.length; i++) {
+                if (event.target == modals[i]) {
+                    modals[i].style.display = "none";
+                    document.body.style.overflow = "auto";
+                }
+            }
+        }
+    </script>
 
 </body>
 </html>
