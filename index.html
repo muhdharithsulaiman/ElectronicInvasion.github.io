@@ -626,17 +626,22 @@
                 </button>
             </div>
 
+            <!-- Smart Auto Feeder Card -->
             <div class="card">
                 <div>
-                    <div class="card-tag">IoT & Automation</div>
-                    <h3>Smart Home Automation System</h3>
-                    <p>Custom micro-controller platform with encrypted web dashboard control for physical hardware actuators.</p>
+                    <img src="autofeeder-pcb3d-top.png" alt="Smart Auto Feeder" class="card-img-preview">
+                    <div class="card-tag">IoT & Cloud Control</div>
+                    <h3>Smart Auto Feeder</h3>
+                    <p>An automated feeding controller powered by ESP32, integrated with DS3231 RTC module, Ultrasonic level sensors, Blynk Cloud, and custom Telegram Bot remote control.</p>
                 </div>
+                <button class="btn-action btn-more" onclick="openModal('autofeeder-modal')">
+                    <i class="fa-solid fa-layer-group"></i> View Documentation
+                </button>
             </div>
         </div>
     </section>
 
-    <!-- Modal for AI Eye Tracker System Details -->
+    <!-- Modal 1: AI Eye Tracker System -->
     <div id="eyetracker-modal" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('eyetracker-modal')">&times;</span>
@@ -667,6 +672,42 @@
                 <div class="gallery-item">
                     <img src="ai-tracker-apk.png" alt="APK Launcher">
                     <h4>6. Android App Interface</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: Smart Auto Feeder -->
+    <div id="autofeeder-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('autofeeder-modal')">&times;</span>
+            <h2 style="color: var(--cyan-glow); text-transform: uppercase; letter-spacing: 2px;">Smart Auto Feeder - Technical Assets</h2>
+            <p style="color: var(--text-dim); margin-top: 5px;">Hardware layout, dual RTC integration, Blynk cloud setup, and Telegram Bot interactive commands.</p>
+
+            <div class="modal-gallery">
+                <div class="gallery-item">
+                    <img src="autofeeder-schematic.png" alt="Schematic Diagram">
+                    <h4>1. Circuit Schematic</h4>
+                </div>
+                <div class="gallery-item">
+                    <img src="autofeeder-pcb2d.png" alt="PCB 2D View">
+                    <h4>2. PCB 2D Trace Layout</h4>
+                </div>
+                <div class="gallery-item">
+                    <img src="autofeeder-pcb3d-top.png" alt="PCB 3D Top View">
+                    <h4>3. PCB 3D Top Render</h4>
+                </div>
+                <div class="gallery-item">
+                    <img src="autofeeder-pcb3d-bottom.png" alt="PCB 3D Bottom View">
+                    <h4>4. PCB 3D Bottom Render</h4>
+                </div>
+                <div class="gallery-item">
+                    <img src="autofeeder-code.png" alt="Code Example">
+                    <h4>5. ESP32 Arduino Code</h4>
+                </div>
+                <div class="gallery-item">
+                    <img src="autofeeder-telegram.png" alt="Telegram Bot App">
+                    <h4>6. Telegram Remote Interface</h4>
                 </div>
             </div>
         </div>
