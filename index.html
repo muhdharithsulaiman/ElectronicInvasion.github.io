@@ -641,6 +641,19 @@
     <section id="fyp">
         <h2 class="section-title">FYP Projects</h2>
         <div class="grid">
+            <!-- 16-Pin IDC Cable Tester Card -->
+            <div class="card">
+                <div>
+                    <img src="idc-tester-top.png" alt="16-Pin IDC Cable Tester" class="card-img-preview">
+                    <div class="card-tag">Hardware / Sequential Logic</div>
+                    <h3>16-Pin IDC Cable Tester</h3>
+                    <p>A standalone high-speed diagnostic tester for 16-pin ribbon cables using NE555 timer clocking, dual CD4017 decade counters, LM7805 voltage regulation, and 16 LED line diagnostics.</p>
+                </div>
+                <button class="btn-action btn-more" onclick="openModal('idctester-modal')">
+                    <i class="fa-solid fa-layer-group"></i> View Documentation
+                </button>
+            </div>
+
             <div class="card">
                 <div>
                     <div class="card-tag">Final Year Project</div>
@@ -648,6 +661,7 @@
                     <p>Advanced sensor integration and wireless data transfer system created for engineering research and academic prototypes.</p>
                 </div>
             </div>
+
             <div class="card">
                 <div>
                     <div class="card-tag">Final Year Project</div>
@@ -710,7 +724,7 @@
             </div>
         </div>
 
-        <!-- Supported Platforms & App Frameworks -->
+        <!-- Supported Platforms & Mobile Apps -->
         <h3 class="sub-title"><i class="fa-solid fa-network-wired"></i> Supported Platforms & Mobile Apps</h3>
         <div class="platform-grid">
             
@@ -770,6 +784,34 @@
 
         </div>
     </section>
+
+    <!-- Modal 0: IDC Cable Tester -->
+    <div id="idctester-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('idctester-modal')">&times;</span>
+            <h2 style="color: var(--cyan-glow); text-transform: uppercase; letter-spacing: 2px;">16-Pin IDC Cable Tester - Circuit Assets</h2>
+            <p style="color: var(--text-dim); margin-top: 5px;">Hardware design layout featuring NE555 astable clock generation, cascaded CD4017 decade counter logic, and dual 2x8 16-pin IDC test header connectors.</p>
+
+            <div class="modal-gallery">
+                <div class="gallery-item">
+                    <img src="idc-tester-schematic.png" alt="IDC Cable Tester Schematic">
+                    <h4>1. Circuit Schematic</h4>
+                </div>
+                <div class="gallery-item">
+                    <img src="idc-tester-pcb2d.png" alt="IDC Cable Tester PCB Layout">
+                    <h4>2. PCB Trace Layout</h4>
+                </div>
+                <div class="gallery-item">
+                    <img src="idc-tester-top.png" alt="IDC Cable Tester Top Render">
+                    <h4>3. Top View (Silkscreen & Pads)</h4>
+                </div>
+                <div class="gallery-item">
+                    <img src="idc-tester-bottom.png" alt="IDC Cable Tester Bottom Render">
+                    <h4>4. Bottom View (Traces)</h4>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Modal 1: AI Eye Tracker System -->
     <div id="eyetracker-modal" class="modal">
