@@ -654,20 +654,17 @@
                 </button>
             </div>
 
+            <!-- Digital Dice Card -->
             <div class="card">
                 <div>
-                    <div class="card-tag">Final Year Project</div>
-                    <h3>Autonomous Telemetry & Tracking</h3>
-                    <p>Advanced sensor integration and wireless data transfer system created for engineering research and academic prototypes.</p>
+                    <img src="digital-dice-top.png" alt="Digital Dice PCB" class="card-img-preview">
+                    <div class="card-tag">Hardware / Sequential Logic</div>
+                    <h3>Digital Dice</h3>
+                    <p>An interactive electronic die powered by an NE555 astable oscillator, 74LS74 D flip-flops, a 4510N counter, and a 74LS47N BCD-to-7-segment decoder to display randomized values (1–6) on an HD-H101 display upon tactile switch triggering.</p>
                 </div>
-            </div>
-
-            <div class="card">
-                <div>
-                    <div class="card-tag">Final Year Project</div>
-                    <h3>Smart Energy Monitoring System</h3>
-                    <p>High-accuracy power monitoring unit integrated with custom algorithmic analysis and real-time displays.</p>
-                </div>
+                <button class="btn-action btn-more" onclick="openModal('digitaldice-modal')">
+                    <i class="fa-solid fa-layer-group"></i> View Documentation
+                </button>
             </div>
         </div>
     </section>
@@ -813,6 +810,34 @@
         </div>
     </div>
 
+    <!-- Modal: Digital Dice -->
+    <div id="digitaldice-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('digitaldice-modal')">&times;</span>
+            <h2 style="color: var(--cyan-glow); text-transform: uppercase; letter-spacing: 2px;">Digital Dice - Circuit Assets</h2>
+            <p style="color: var(--text-dim); margin-top: 5px;">Sequential digital logic project featuring NE555 oscillator, 74LS74 flip-flops, 4510N counter, and 74LS47N decoder drive for HD-H101 7-segment display.</p>
+
+            <div class="modal-gallery">
+                <div class="gallery-item">
+                    <img src="digital-dice-schematic.png" alt="Digital Dice Schematic">
+                    <h4>1. Circuit Schematic</h4>
+                </div>
+                <div class="gallery-item">
+                    <img src="digital-dice-pcb2d.png" alt="Digital Dice PCB Layout">
+                    <h4>2. PCB Trace Layout</h4>
+                </div>
+                <div class="gallery-item">
+                    <img src="digital-dice-top.png" alt="Digital Dice Top Render">
+                    <h4>3. Top View (Silkscreen & Pads)</h4>
+                </div>
+                <div class="gallery-item">
+                    <img src="digital-dice-bottom.png" alt="Digital Dice Bottom Render">
+                    <h4>4. Bottom View (Traces)</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Modal 1: AI Eye Tracker System -->
     <div id="eyetracker-modal" class="modal">
         <div class="modal-content">
@@ -886,49 +911,53 @@
     </div>
 
     <!-- Contact Section -->
-    <section id="contact" style="text-align: center;">
-        <h2 class="section-title">Start Your Project</h2>
-        <p style="color: var(--text-dim); margin-bottom: 30px;">Have an FYP, FPGA, or IoT project idea? Connect directly with Muhammad Harith via WhatsApp or Telegram to discuss specifications.</p>
-        
-        <div class="contact-buttons">
-            <a href="https://wa.me/60193347191" target="_blank" class="btn-action btn-whatsapp">
-                <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
-            </a>
-            <a href="https://t.me/+60193347191" target="_blank" class="btn-action btn-telegram">
-                <i class="fa-paper-plane"></i> Message on Telegram
-            </a>
-        </div>
-        <div class="phone-display" style="margin-top: 25px;">
-            <i class="fa-solid fa-phone"></i> Phone: +60 19-334 7191
+    <section id="contact">
+        <h2 class="section-title">Contact & Inquiries</h2>
+        <div class="about-box" style="text-align: center;">
+            <p style="font-size: 1.2rem; color: #ffffff;">Need technical consultation or custom electronic engineering development?</p>
+            <p style="color: var(--text-dim); margin-bottom: 30px;">Direct messaging channels are available for project requests, hardware troubleshooting, and full prototype design.</p>
+            
+            <div class="contact-buttons">
+                <a href="https://wa.me/60193347191" target="_blank" class="btn-action btn-whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+                </a>
+                <a href="https://t.me/+60193347191" target="_blank" class="btn-action btn-telegram">
+                    <i class="fa-paper-plane"></i> Message on Telegram
+                </a>
+            </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2026 ELECTRONIC INVASION | Muhammad Harith Bin Sulaiman. All rights reserved.</p>
+        <p>&copy; Electronic Invasion — All Rights Reserved. Designed & Developed by Muhammad Harith Bin Sulaiman.</p>
     </footer>
 
+    <!-- Modal Control Scripts -->
     <script>
         function openModal(modalId) {
-            document.getElementById(modalId).style.display = "block";
-            document.body.style.overflow = "hidden";
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            }
         }
 
         function closeModal(modalId) {
-            document.getElementById(modalId).style.display = "none";
-            document.body.style.overflow = "auto";
-        }
-
-        // Close modal when clicking outside the box
-        window.onclick = function(event) {
-            let modals = document.getElementsByClassName('modal');
-            for (let i = 0; i < modals.length; i++) {
-                if (event.target == modals[i]) {
-                    modals[i].style.display = "none";
-                    document.body.style.overflow = "auto";
-                }
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
             }
         }
-    </script>
 
+        // Close modal when clicking outside content box
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        };
+    </script>
 </body>
 </html>
