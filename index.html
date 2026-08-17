@@ -676,12 +676,25 @@
             <!-- PCB Cutter Card -->
             <div class="card">
                 <div>
-                    <img src="PCB Cutter Top.png" alt="PCB Cutter Board" class="card-img-preview">
+                    <img src="pcb-cutter-top.png" alt="PCB Cutter Board" class="card-img-preview">
                     <div class="card-tag">Hardware / Motor & Relay Control</div>
                     <h3>PCB Cutter</h3>
                     <p>A custom integrated control board featuring dedicated screw terminal blocks for ultrasonic sensing, 4-channel relay output control, IR positioning sensors, LCD display interface, and dual-axis DC motor / actuator control.</p>
                 </div>
                 <button class="btn-action btn-more" onclick="openModal('pcbcutter-modal')">
+                    <i class="fa-solid fa-layer-group"></i> View Documentation
+                </button>
+            </div>
+
+            <!-- RCCB Tester Card -->
+            <div class="card">
+                <div>
+                    <img src="rccb-tester-top.png" alt="RCCB Tester Board" class="card-img-preview">
+                    <div class="card-tag">Hardware / High Voltage & Relay Testing</div>
+                    <h3>RCCB Tester</h3>
+                    <p>A dedicated residual current circuit breaker tester board with multi-relay switching (Live, Neutral, Earth), tripping time measurement, wire resistance logic, and full LCD status monitoring.</p>
+                </div>
+                <button class="btn-action btn-more" onclick="openModal('rccbtester-modal')">
                     <i class="fa-solid fa-layer-group"></i> View Documentation
                 </button>
             </div>
@@ -845,23 +858,55 @@
 
             <div class="modal-gallery">
                 <div class="gallery-item">
-                    <img src="image_eb4f18.png" alt="PCB Cutter Schematic">
+                    <img src="pcb-cutter-schematic.png" alt="PCB Cutter Schematic">
                     <h4>1. Circuit Schematic</h4>
                 </div>
                 <div class="gallery-item">
-                    <img src="image_eb4ebe.png" alt="PCB Cutter Routing Layout">
+                    <img src="pcb-cutter-pcb2d.png" alt="PCB Cutter Routing Layout">
                     <h4>2. PCB Trace Layout</h4>
                 </div>
                 <div class="gallery-item">
-                    <img src="PCB Cutter Top.png" alt="PCB Cutter Top Render">
+                    <img src="pcb-cutter-top.png" alt="PCB Cutter Top Render">
                     <h4>3. Top View (Silkscreen & Pads)</h4>
                 </div>
                 <div class="gallery-item">
-                    <img src="PCB Cutter Bottom.png" alt="PCB Cutter Bottom Render">
+                    <img src="pcb-cutter-bottom.png" alt="PCB Cutter Bottom Render">
                     <h4>4. Bottom View (Traces)</h4>
                 </div>
                 <div class="gallery-item">
-                    <img src="image_eb3c90.png" alt="PCB Cutter Arduino Firmware Code">
+                    <img src="pcb-cutter-code.png" alt="PCB Cutter Arduino Firmware Code">
+                    <h4>5. Arduino Firmware Code</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: RCCB Tester -->
+    <div id="rccbtester-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('rccbtester-modal')">&times;</span>
+            <h2 style="color: var(--cyan-glow); text-transform: uppercase; letter-spacing: 2px;">RCCB Tester - Circuit Assets</h2>
+            <p style="color: var(--text-dim); margin-top: 5px;">Hardware schematic, PCB trace layout, top/bottom silkscreen renders, and Arduino firmware configuration for RCCB line tripping and resistance diagnostics.</p>
+
+            <div class="modal-gallery">
+                <div class="gallery-item">
+                    <img src="rccb-tester-schematic.png" alt="RCCB Tester Schematic">
+                    <h4>1. Circuit Schematic</h4>
+                </div>
+                <div class="gallery-item">
+                    <img src="rccb-tester-pcb2d.png" alt="RCCB Tester PCB Layout">
+                    <h4>2. PCB Trace Layout</h4>
+                </div>
+                <div class="gallery-item">
+                    <img src="rccb-tester-top.png" alt="RCCB Tester Top Render">
+                    <h4>3. Top View (Silkscreen & Pads)</h4>
+                </div>
+                <div class="gallery-item">
+                    <img src="rccb-tester-bottom.png" alt="RCCB Tester Bottom Render">
+                    <h4>4. Bottom View (Traces)</h4>
+                </div>
+                <div class="gallery-item">
+                    <img src="rccb-tester-code.png" alt="RCCB Tester Arduino Firmware Code">
                     <h4>5. Arduino Firmware Code</h4>
                 </div>
             </div>
