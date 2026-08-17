@@ -260,6 +260,14 @@
             background: linear-gradient(90deg, var(--cyan-glow), transparent);
         }
 
+        .sub-title {
+            color: var(--cyan-glow);
+            font-size: 1.3rem;
+            margin: 40px 0 20px 0;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
         /* About Me Styling */
         .about-box {
             background: var(--card-bg);
@@ -390,6 +398,68 @@
             color: var(--text-dim);
             font-size: 0.95rem;
             margin-bottom: 15px;
+        }
+
+        /* IoT Platform Section Grid */
+        .platform-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .platform-card {
+            background: rgba(13, 22, 38, 0.85);
+            border: 1px solid var(--border-line);
+            padding: 20px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .platform-card:hover {
+            border-color: var(--cyan-glow);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 229, 255, 0.2);
+        }
+
+        .platform-icon-container {
+            width: 65px;
+            height: 65px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 15px;
+            background: rgba(0, 229, 255, 0.05);
+            border: 1px solid var(--border-line);
+            border-radius: 50%;
+        }
+
+        .platform-icon-container i {
+            font-size: 2rem;
+        }
+
+        .platform-icon-container img {
+            width: 45px;
+            height: 45px;
+            object-fit: contain;
+            filter: drop-shadow(0 0 6px rgba(0, 229, 255, 0.6));
+        }
+
+        .platform-card h4 {
+            color: #ffffff;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+
+        .platform-card p {
+            color: var(--text-dim);
+            font-size: 0.88rem;
+            line-height: 1.4;
         }
 
         /* Modal Showcase Styles */
@@ -639,6 +709,66 @@
                 </button>
             </div>
         </div>
+
+        <!-- Supported Platforms & App Frameworks -->
+        <h3 class="sub-title"><i class="fa-solid fa-network-wired"></i> Supported Platforms & Mobile Apps</h3>
+        <div class="platform-grid">
+            
+            <!-- Electronic Invasion App -->
+            <div class="platform-card">
+                <div class="platform-icon-container">
+                    <img src="logo.png" alt="Electronic Invasion App Logo">
+                </div>
+                <h4>Electronic Invasion App</h4>
+                <p>Custom-built native Android APK interface tailored specifically for high-speed hardware control and direct system monitoring.</p>
+            </div>
+
+            <!-- Telegram Bot -->
+            <div class="platform-card">
+                <div class="platform-icon-container">
+                    <i class="fa-brands fa-telegram" style="color: #0088cc;"></i>
+                </div>
+                <h4>Telegram Bot API</h4>
+                <p>Instant remote control, dynamic timer adjustments, and real-time alert notifications directly through automated Telegram commands.</p>
+            </div>
+
+            <!-- WhatsApp Bot -->
+            <div class="platform-card">
+                <div class="platform-icon-container">
+                    <i class="fa-brands fa-whatsapp" style="color: #25d366;"></i>
+                </div>
+                <h4>WhatsApp Bot Integration</h4>
+                <p>Automated WhatsApp messaging triggers for emergency warnings, status updates, and hardware feedback messages.</p>
+            </div>
+
+            <!-- Blynk IoT -->
+            <div class="platform-card">
+                <div class="platform-icon-container">
+                    <i class="fa-solid fa-gauge-high" style="color: #24b07b;"></i>
+                </div>
+                <h4>Blynk IoT Cloud</h4>
+                <p>Interactive cloud dashboards with real-time sliders, virtual pins, gauges, and mobile control widgets.</p>
+            </div>
+
+            <!-- Firebase Realtime Database -->
+            <div class="platform-card">
+                <div class="platform-icon-container">
+                    <i class="fa-solid fa-fire" style="color: #ffca28;"></i>
+                </div>
+                <h4>Google Firebase</h4>
+                <p>Ultra-low-latency real-time database synchronization for instant microsecond state updates across global networks.</p>
+            </div>
+
+            <!-- MIT App Inventor -->
+            <div class="platform-card">
+                <div class="platform-icon-container">
+                    <i class="fa-solid fa-cubes" style="color: #ea4335;"></i>
+                </div>
+                <h4>MIT App Inventor</h4>
+                <p>Custom mobile GUI application development with custom Bluetooth (HC-05) and Web API connection blocks.</p>
+            </div>
+
+        </div>
     </section>
 
     <!-- Modal 1: AI Eye Tracker System -->
@@ -706,7 +836,7 @@
                     <h4>5. ESP32 Arduino Code</h4>
                 </div>
                 <div class="gallery-item">
-                    <img src="autofeeder-telegram.png" alt="Telegram Bot App">
+                    <img src="autofeeder-telegram.png" alt="Telegram Remote Interface">
                     <h4>6. Telegram Remote Interface</h4>
                 </div>
             </div>
