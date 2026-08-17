@@ -673,19 +673,17 @@
     <section id="fpga">
         <h2 class="section-title">FPGA Projects</h2>
         <div class="grid">
+            <!-- PCB Cutter Card -->
             <div class="card">
                 <div>
-                    <div class="card-tag">FPGA / Verilog / VHDL</div>
-                    <h3>High-Speed Signal Processor</h3>
-                    <p>Custom digital logic architecture optimized for low-latency digital signal processing on FPGA hardware.</p>
+                    <img src="PCB Cutter Top.png" alt="PCB Cutter Board" class="card-img-preview">
+                    <div class="card-tag">Hardware / Motor & Relay Control</div>
+                    <h3>PCB Cutter</h3>
+                    <p>A custom integrated control board featuring dedicated screw terminal blocks for ultrasonic sensing, 4-channel relay output control, IR positioning sensors, LCD display interface, and dual-axis DC motor / actuator control.</p>
                 </div>
-            </div>
-            <div class="card">
-                <div>
-                    <div class="card-tag">FPGA / Hardware Logic</div>
-                    <h3>VGA Display & Graphics Core</h3>
-                    <p>Hardware-level video output controller built completely from scratch using Verilog logic blocks.</p>
-                </div>
+                <button class="btn-action btn-more" onclick="openModal('pcbcutter-modal')">
+                    <i class="fa-solid fa-layer-group"></i> View Documentation
+                </button>
             </div>
         </div>
     </section>
@@ -832,6 +830,34 @@
                 </div>
                 <div class="gallery-item">
                     <img src="digital-dice-bottom.png" alt="Digital Dice Bottom Render">
+                    <h4>4. Bottom View (Traces)</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: PCB Cutter -->
+    <div id="pcbcutter-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('pcbcutter-modal')">&times;</span>
+            <h2 style="color: var(--cyan-glow); text-transform: uppercase; letter-spacing: 2px;">PCB Cutter - Circuit Assets</h2>
+            <p style="color: var(--text-dim); margin-top: 5px;">Hardware layout featuring power management, 4-channel relay control, ultrasonic distance sensing, LCD line communications, and dual DC motor/grinder drivers.</p>
+
+            <div class="modal-gallery">
+                <div class="gallery-item">
+                    <img src="image_eb4f18.png" alt="PCB Cutter Schematic">
+                    <h4>1. Circuit Schematic</h4>
+                </div>
+                <div class="gallery-item">
+                    <img src="image_eb4ebe.png" alt="PCB Cutter Routing Layout">
+                    <h4>2. PCB Trace Layout</h4>
+                </div>
+                <div class="gallery-item">
+                    <img src="PCB Cutter Top.png" alt="PCB Cutter Top Render">
+                    <h4>3. Top View (Silkscreen & Pads)</h4>
+                </div>
+                <div class="gallery-item">
+                    <img src="PCB Cutter Bottom.png" alt="PCB Cutter Bottom Render">
                     <h4>4. Bottom View (Traces)</h4>
                 </div>
             </div>
